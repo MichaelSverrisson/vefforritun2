@@ -11,7 +11,7 @@ async function main(){
     <title>${title}</title>
 </head>
 <body>
-    <div>Halló heimur</div>
+    <div>Hákon er með tásufetish</div>
 </body>
 </html>
 `;
