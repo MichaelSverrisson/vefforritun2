@@ -1,6 +1,7 @@
 {
   "name": "y",
   "version": "0.0.1",
+  "type":"module",
   "description": "verkefni1 í vefforritun 2",
   "main": "index.js",
   "scripts": {
@@ -11,7 +12,7 @@
     "lint": "stylelint styles.scss --syntax scss",
     "sass-build": "sass styles.scss ./build/styles.css",
     "copy": "cpy ./*.html . /build/",
-    "build": ""
+    "build": "node main.js"
   },
   "author": "Michael Þór Sverrisson",
   "license": "ISC",
