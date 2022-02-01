@@ -11,7 +11,7 @@
     "lint": "stylelint styles.scss --syntax scss",
     "sass-build": "sass styles.scss ./build/styles.css",
     "copy": "cpy ./*.html . /build/",
-    "build": "concurrently npm:sass-build npm:copy"
+    "build": ""
   },
   "author": "Michael Þór Sverrisson",
   "license": "ISC",
