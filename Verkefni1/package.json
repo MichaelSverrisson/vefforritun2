@@ -4,6 +4,7 @@
   "description": "verkefni1 í vefforritun 2",
   "main": "index.js",
   "scripts": {
+    "test": "set NODE_OPTIONS='--experimental-vm-modules' && jest ./test/*.js",
     "browser-sync": "browser-sync start --server --files index.html styles.css",
     "sass": "node-sass styles.scss styles.css -w",
     "dev": "concurrently npm:sass-watch npm:browser-sync",
@@ -18,8 +19,12 @@
     "browser-sync": "^2.27.7",
     "concurrently": "^7.0.0",
     "cpy-cli": "^3.1.1",
+    "jest": "^27.4.7",
+    "node": "^17.4.0",
     "sass": "^1.49.0",
-    "sass-watch": "^0.1.0"
+    "sass-watch": "^0.1.0",
+    "test": "^0.6.0",
+    "yarn": "^1.22.17"
   },
   "devDependencies": {
     "stylelint": "^14.3.0",
