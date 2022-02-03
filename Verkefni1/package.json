@@ -1,36 +1,38 @@
 {
-  "name": "y",
+  "name": "yverkefni1",
   "version": "0.0.1",
   "type": "module",
   "description": "verkefni1 í vefforritun 2",
   "main": "index.js",
   "scripts": {
-    "test": "set NODE_OPTIONS='--experimental-vm-modules' && jest ./test/*.js",
+    "test": " set NODE_OPTIONS=' --experimental-vm-modules' && jest ./*.js",
     "browser-sync": "browser-sync start --server --files index.html styles.css",
     "sass": "node-sass styles.scss styles.css -w",
     "dev": "concurrently npm:sass-watch npm:browser-sync",
     "lint": "stylelint styles.scss --syntax scss",
     "sass-build": "sass styles.scss ./build/styles.css",
     "copy": "cpy ./*.html . /build/",
-    "build": "node main.js"
+    "build": "node ./src/build.js"
   },
-  "author": "Michael Þór Sverrisson",
+  "author": "Michael Þór",
   "license": "ISC",
   "dependencies": {
     "browser-sync": "^2.27.7",
     "build": "^0.1.4",
     "concurrently": "^7.0.0",
     "cpy-cli": "^3.1.1",
-    "jest": "^27.4.7",
+    "gray-matter": "^4.0.3",
+    "marked": "^4.0.12",
     "node": "^17.4.0",
     "sass": "^1.49.0",
     "sass-watch": "^0.1.0",
-    "test": "^0.6.0",
-    "yarn": "^1.22.17"
+    "test": "^0.6.0"
   },
   "devDependencies": {
+    "jest": "^27.4.7",
     "stylelint": "^14.3.0",
-    "stylelint-config-primer": "^11.1.1"
+    "stylelint-config-primer": "^11.1.1",
+    "yarn": "^1.22.17"
   },
   "repository": {
     "type": "git",
