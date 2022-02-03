@@ -1,6 +1,6 @@
 import { readFile } from "fs/promises";
 import { join } from 'path';
-import { Value } from "sass";
+
 
 const DATA_DIR = './data';
 export async function txttonumbers(file){
@@ -14,7 +14,7 @@ export async function txttonumbers(file){
         return Number;
     });
 
-    const newarr = array.filter((Value) => !Number.isNaN(Value));
+    const newarr = array.filter((value) => !Number.isNaN(value));
     const numberobject = { name: file, data: newarr};
     return numberobject;
 }
