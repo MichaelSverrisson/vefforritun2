@@ -1,8 +1,5 @@
 import { readFile, readdir, stat } from 'fs/promises';
 import { makeHTML } from './make-html.js';
-
-import { makeHTML } from './make-html.js';
-import { parse } from 'path/posix';
 import { copyFile } from 'fs';
 
 const DATA_DIR = './data';
@@ -12,7 +9,7 @@ async function main() {
     if (!(await direxists(OUT_DIR))){
         await makedir(OUT_DIR);
     }
-    const files = await readdir(DIR);
+    const files = await readdir(DATA_DIR);
     console.log('files ', files);
 
     const sections = [];
