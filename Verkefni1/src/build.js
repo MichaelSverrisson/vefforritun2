@@ -1,13 +1,25 @@
-import { readFile, readdir, stat } from 'fs/promises';
+import { copyFile, mkdir, readdir, stat } from 'fs/promises';
 import { makeHTML } from './make-html.js';
-import { copyFile } from 'fs';
+import { createNumberhlutir } from './calculate.js';
+
+import { txttonumbers } from './txttonumbers.js';
 
 const DATA_DIR = './data';
 const OUT_DIR = './dist';
 
+async function direxists(dir){
+    try{
+        const info = await stat(dir);
+        return info.isDirectory();
+    }
+    catch(e){
+        return false;
+    }
+}
+
 async function main() {
     if (!(await direxists(OUT_DIR))){
-        await makedir(OUT_DIR);
+        await mkdir(OUT_DIR);
     }
     const files = await readdir(DATA_DIR);
     console.log('files ', files);
