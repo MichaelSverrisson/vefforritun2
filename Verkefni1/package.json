@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "type": "module",
   "description": "verkefni1 í vefforritun 2",
-  "main": "index.js",
+  "main": "build.js",
   "scripts": {
     "test": " set NODE_OPTIONS=' --experimental-vm-modules' && jest ./*.js",
     "browser-sync": "browser-sync start --server --files index.html styles.css",
